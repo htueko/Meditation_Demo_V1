@@ -1,3 +1,5 @@
+apply plugin: 'com.apollographql.android'
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
@@ -21,6 +23,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    configurations.all {
+        resolutionStrategy {
+            // Please removed it, as soon as the project compiles without it
+            force 'org.jetbrains:annotations:16.0.1'
+        }
+    }
 }
 
 dependencies {
@@ -32,4 +40,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // graph ql
+    implementation 'com.apollographql.apollo:apollo-runtime:1.2.0'
+    compileOnly 'org.jetbrains:annotations:16.0.1'
+    testCompileOnly 'org.jetbrains:annotations:16.0.1'
+
 }
