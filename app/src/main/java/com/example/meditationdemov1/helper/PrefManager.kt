@@ -10,13 +10,11 @@ class PrefManager(context: Context) {
         // Shared preferences file name
         private const val PREF_NAME = "meditation version one"
         private const val IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch"
+        private const val PRIVATE_MODE = 0
     }
 
     private var pref: SharedPreferences
     private var editor: SharedPreferences.Editor
-
-    // shared pref mode
-    private var PRIVATE_MODE = 0
 
     init {
         pref = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE)

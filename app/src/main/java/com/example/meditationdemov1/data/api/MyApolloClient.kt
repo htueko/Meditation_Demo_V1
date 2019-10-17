@@ -1,4 +1,4 @@
-package com.example.meditationdemov1.model.network_client
+package com.example.meditationdemov1.data.api
 
 import com.apollographql.apollo.ApolloClient
 import okhttp3.OkHttpClient

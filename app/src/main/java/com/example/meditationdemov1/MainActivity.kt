@@ -1,6 +1,5 @@
 package com.example.meditationdemov1
 
-import android.app.Activity
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +8,7 @@ import android.view.View
 import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
-import com.example.meditationdemov1.model.network_client.MyApolloClient
+import com.example.meditationdemov1.data.api.MyApolloClient
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.StringBuilder
 
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                     sb.append(character)
                     sb.append(operationName)
                     sb.append(data)
-                    txt_placeholder_main.text = sb
+                    //txt_placeholder_main.text = sb
                 }
             }
 
